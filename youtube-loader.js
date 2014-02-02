@@ -38,7 +38,7 @@ function youtubeLoader() {
             var str = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
             var id = (src.match(str) ? RegExp.$1 : false);
             if(id) { 
-	            var placeholder = '<div style="position: relative; margin: 0 auto; width:' + width + 'px; height:' + height + 'px;">';
+	            var placeholder = '<div style="position: relative; width: ' + width + 'px; height: ' + height + 'px;">';
 	            placeholder += '<a href="#" onclick="youtubeLoaderVideo(\'' + id + '\',' + width + ',' + height +'); return false;" id="youtube-loader-' + id + '" style="display: block; position: absolute; background: url(http://i.ytimg.com/vi/'+id+'/hqdefault.jpg) no-repeat; background-size: '+ width +'px '+ height +'px; width: '+ width +'px; height: '+ height +'px;">'; 
 	            placeholder += '<div style="position: absolute; background: url(' + buttonImage + ') no-repeat scroll 0 0 transparent; width: ' + buttonWidth + 'px; height: ' + buttonHeight + 'px; left: ' + buttonLeft + 'px; top: ' + buttonTop + 'px; margin: auto; z-index: 999;">';
 	            placeholder += '</div></a></div>';
